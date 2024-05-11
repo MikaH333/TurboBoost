@@ -135,7 +135,14 @@ namespace TurboBoost
                 if (result == DialogResult.OK)
                 {
                     BluetoothDeviceInfo device = dialog.SelectedDevice;
-                    MessageBox.Show("Valittu laite: " + device.DeviceName);
+                    if (device != null)
+                    {
+                        MessageBox.Show("Valittu laite: " + device.DeviceName);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ei valittua laitetta.");
+                    }
                 }
             }
             catch (Exception ex)
