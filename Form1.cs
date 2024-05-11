@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using InTheHand.Net.Sockets;
+using InTheHand.Net.Bluetooth;
 
 namespace TurboBoost
 {
@@ -122,6 +124,24 @@ namespace TurboBoost
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             serialPort.BaudRate = int.Parse(comboBox1.SelectedItem.ToString());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SelectBluetoothDeviceDialog dialog = new SelectBluetoothDeviceDialog();
+                DialogResult result = dialog.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    BluetoothDeviceInfo device = dialog.SelectedDevice;
+                    MessageBox.Show("Valittu laite: " + device.DeviceName);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Virhe yhdistettäessä Bluetoothiin: " + ex.Message);
+            }
         }
     }
 }

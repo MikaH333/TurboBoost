@@ -38,6 +38,8 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // boostLB
@@ -55,7 +57,7 @@
             this.connectBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.connectBT.Location = new System.Drawing.Point(203, 139);
             this.connectBT.Name = "connectBT";
-            this.connectBT.Size = new System.Drawing.Size(91, 36);
+            this.connectBT.Size = new System.Drawing.Size(107, 36);
             this.connectBT.TabIndex = 1;
             this.connectBT.Text = "Hae";
             this.connectBT.UseVisualStyleBackColor = true;
@@ -66,7 +68,7 @@
             this.comPortBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comPortBTN.Location = new System.Drawing.Point(203, 205);
             this.comPortBTN.Name = "comPortBTN";
-            this.comPortBTN.Size = new System.Drawing.Size(91, 37);
+            this.comPortBTN.Size = new System.Drawing.Size(107, 37);
             this.comPortBTN.TabIndex = 2;
             this.comPortBTN.Text = "Valitse";
             this.comPortBTN.UseVisualStyleBackColor = true;
@@ -105,7 +107,7 @@
             // 
             this.progressBar1.Location = new System.Drawing.Point(203, 80);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(91, 40);
+            this.progressBar1.Size = new System.Drawing.Size(107, 40);
             this.progressBar1.TabIndex = 6;
             // 
             // label3
@@ -118,11 +120,34 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Bar";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(203, 268);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(107, 37);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Yhdistä";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(18, 278);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(137, 20);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Yhdistä bluetooth";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(368, 267);
+            this.ClientSize = new System.Drawing.Size(368, 345);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.comboBox1);
@@ -149,6 +174,8 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label5;
     }
 }
 
